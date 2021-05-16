@@ -1,7 +1,7 @@
 package services;
 
-import Java.exceptions.CourseNameExistsException;
-import Java.exceptions.EmptyFieldException;
+import exceptions.CourseNameExistsException;
+import exceptions.EmptyFieldException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -10,7 +10,7 @@ import org.json.simple.parser.ParseException;
 import java.io.*;
 import java.util.Iterator;
 
-import static java.User.userNameProvider;
+import static services.User.userNameProvider;
 
 public class Provider {
     public static String nameCourseProvider;

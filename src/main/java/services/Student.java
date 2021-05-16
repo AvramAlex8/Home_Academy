@@ -8,7 +8,7 @@ import org.json.simple.parser.ParseException;
 import java.io.*;
 import java.util.Iterator;
 
-import static java.User.userNameStudent;
+import static services.User.userNameStudent;
 
 public class Student {
     public static String nameCourse;

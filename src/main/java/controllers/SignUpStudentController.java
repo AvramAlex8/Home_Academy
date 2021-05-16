@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import exceptions.EmptyFieldException;
 import exceptions.ShortPasswordException;
 import exceptions.UsernameAlreadyExistsException;
+import services.User;
 
 import java.io.IOException;
 
