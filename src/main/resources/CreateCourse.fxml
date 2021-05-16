@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.CreateCourseController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="299.0">
+                    <children>
+                        <ImageView fitHeight="400.0" fitWidth="315.0" layoutX="-1.0" layoutY="2.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@../resources/images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="63.0" fitWidth="64.0" layoutX="173.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/book.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="115.0" layoutY="185.0" text="Home Academy" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="149.0" layoutY="241.0" text="Learn to do more" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Pane layoutX="300.0" prefHeight="403.0" prefWidth="299.0" style="-fx-background-color: #fff;">
+                    <children>
+                        <Label fx:id="closeButton" layoutX="285.0" layoutY="1.0" onMouseClicked="#handleCloseButtonAction" text="X" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font></Label>
+                        <Label layoutX="23.0" layoutY="15.0" text="Create a course" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="nameField" layoutX="74.0" layoutY="51.0" promptText="Name" />
+                        <TextField fx:id="priceField" layoutX="75.0" layoutY="84.0" promptText="Price" />
+                        <TextArea fx:id="descriptionField" layoutX="74.0" layoutY="119.0" prefHeight="89.0" prefWidth="149.0" promptText="Description" />
+                        <TextArea fx:id="contentField" layoutX="74.0" layoutY="221.0" prefHeight="89.0" prefWidth="149.0" promptText="Content" />
+                        <Label fx:id="homePageButton" layoutX="176.0" layoutY="371.0" onMouseClicked="#handleHomePageButton" text="Back to home page" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="emptyFieldMessage" layoutX="17.0" layoutY="318.0" prefHeight="17.0" prefWidth="250.0" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="createButton" layoutX="106.0" layoutY="335.0" mnemonicParsing="false" onMouseClicked="#handleCreateButton" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #183e86;" text="Create" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
