@@ -10,7 +10,7 @@ import org.json.simple.parser.ParseException;
 import java.io.*;
 import java.util.Iterator;
 
-import static main.User.userNameProvider;
+import static java.User.userNameProvider;
 
 public class Provider {
     public static String nameCourseProvider;
