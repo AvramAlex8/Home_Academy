@@ -9,40 +9,23 @@ import javafx.scene.control.*;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import exceptions.CourseNameIncorrectException;
+import exceptions.CourseNameExistsException;
+import exceptions.EmptyFieldException;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SearchCourseProviderController implements Initializable {
+public class CreateCourseController implements Initializable {
 
-    @FXML
     public Label closeButton;
+    public Button createButton;
     public Label homePageButton;
+    public TextArea descriptionField;
+    public TextField nameField;
+    public TextField priceField;
+    public TextArea contentField;
     public Label emptyFieldMessage;
-    public TextField searchCourseName;
-    public Button searchButton;
-    public Label courseNameIncorrect;
-
-    @FXML
-    public void handleSearchButton(MouseEvent event) throws IOException {
-        try{
-            if(Provider.searchCourseProvider(searchCourseName.getText()))
-            {
-                Parent informationPage = FXMLLoader.load(getClass().getResource("InformationCourseProvider.fxml"));
-                Scene informationScene = new Scene(informationPage);
-                Stage appStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-                appStage.setScene(informationScene);
-                appStage.show();
-            }
-            else
-                throw new CourseNameIncorrectException();
-        } catch(CourseNameIncorrectException e)
-        {
-            courseNameIncorrect.setText(e.getMessage());
-        }
-    }
 
     @FXML
     public void handleHomePageButton(MouseEvent event) throws IOException
@@ -53,6 +36,18 @@ public class SearchCourseProviderController implements Initializable {
         Stage appStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         appStage.setScene(HomeScene);
         appStage.show();
+    }
+
+    @FXML
+    public void handleCreateButton(MouseEvent event)
+    {
+        try{
+            Provider.createCourse(nameField.getText(), priceField.getText(), descriptionField.getText(), contentField.getText());
+            emptyFieldMessage.setText("                         Course created!");
+        } catch (EmptyFieldException | CourseNameExistsException e)
+        {
+            emptyFieldMessage.setText(e.getMessage());
+        }
     }
 
     @FXML

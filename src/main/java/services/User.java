@@ -1,9 +1,9 @@
 package services;
 
-import java.exceptions.EmptyFieldException;
-import java.exceptions.ShortPasswordException;
-import java.exceptions.UsernameAlreadyExistsException;
-import java.exceptions.UsernameOrPasswordIncorrectException;
+import exceptions.EmptyFieldException;
+import exceptions.ShortPasswordException;
+import exceptions.UsernameAlreadyExistsException;
+import exceptions.UsernameOrPasswordIncorrectException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

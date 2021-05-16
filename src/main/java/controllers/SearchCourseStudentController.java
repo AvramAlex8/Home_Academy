@@ -1,12 +1,13 @@
 package controllers;
-
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import exceptions.CourseNameIncorrectException;
@@ -15,22 +16,21 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SearchCourseProviderController implements Initializable {
-
+public class SearchCourseStudentController implements Initializable {
     @FXML
     public Label closeButton;
-    public Label homePageButton;
-    public Label emptyFieldMessage;
-    public TextField searchCourseName;
     public Button searchButton;
-    public Label courseNameIncorrect;
+    public TextField searchNameField;
+    public Label homePageButton;
+    public Label courseNameIncorrectField;
 
     @FXML
     public void handleSearchButton(MouseEvent event) throws IOException {
-        try{
-            if(Provider.searchCourseProvider(searchCourseName.getText()))
+        try
+        {
+            if(Student.searchCourseStudent(searchNameField.getText()))
             {
-                Parent informationPage = FXMLLoader.load(getClass().getResource("InformationCourseProvider.fxml"));
+                Parent informationPage = FXMLLoader.load(getClass().getResource("InformationCourseStudent.fxml"));
                 Scene informationScene = new Scene(informationPage);
                 Stage appStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
                 appStage.setScene(informationScene);
@@ -40,15 +40,14 @@ public class SearchCourseProviderController implements Initializable {
                 throw new CourseNameIncorrectException();
         } catch(CourseNameIncorrectException e)
         {
-            courseNameIncorrect.setText(e.getMessage());
+            courseNameIncorrectField.setText(e.getMessage());
         }
     }
 
-    @FXML
     public void handleHomePageButton(MouseEvent event) throws IOException
     {
 
-        Parent HomePage = FXMLLoader.load(getClass().getResource("HomePageProvider.fxml"));
+        Parent HomePage = FXMLLoader.load(getClass().getResource("HomePageStudent.fxml"));
         Scene HomeScene = new Scene(HomePage);
         Stage appStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         appStage.setScene(HomeScene);

@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import main.exceptions.UsernameOrPasswordIncorrectException;
+import exceptions.UsernameOrPasswordIncorrectException;
 
 import java.io.IOException;
 import java.net.URL;
