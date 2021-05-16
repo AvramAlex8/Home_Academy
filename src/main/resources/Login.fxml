@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="299.0">
+                    <children>
+                        <ImageView fitHeight="400.0" fitWidth="315.0" layoutX="-1.0" layoutY="2.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@../resources/images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="63.0" fitWidth="64.0" layoutX="173.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/book.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="115.0" layoutY="185.0" text="Home Academy" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="149.0" layoutY="241.0" text="Learn to do more" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Pane layoutX="300.0" layoutY="-1.0" prefHeight="403.0" prefWidth="299.0" style="-fx-background-color: #fff;">
+                    <children>
+                        <Label layoutX="104.0" layoutY="76.0" text="Sign In" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="28.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="42.0" layoutY="335.0" text="Don't have an account?">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="signUpButtonLogin" layoutX="203.0" layoutY="335.0" onMouseClicked="#handleSignUpButton" text="Sign up" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <ImageView fitHeight="71.0" fitWidth="37.0" layoutX="23.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/person.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="27.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/padlock.png" />
+                            </image>
+                        </ImageView>
+                        <TextField fx:id="usernameLogin" layoutX="68.0" layoutY="151.0" prefHeight="30.0" prefWidth="210.0" promptText="Username" />
+                        <PasswordField fx:id="passwordLogin" layoutX="68.0" layoutY="202.0" prefHeight="30.0" prefWidth="210.0" promptText="Password" />
+                        <Button fx:id="logInButton" layoutX="85.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#handleLogInButton" prefHeight="37.0" prefWidth="143.0" style="-fx-background-color: #183e86;" text="Log In" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="closeButtonLogin" layoutX="285.0" layoutY="1.0" onMouseClicked="#handleCloseButtonAction" text="X" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font></Label>
+                        <Label fx:id="emptyFieldMessage" layoutX="57.0" layoutY="309.0" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

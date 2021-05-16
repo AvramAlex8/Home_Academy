@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomePageStudentController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane layoutX="1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="299.0">
+                    <children>
+                        <ImageView fitHeight="400.0" fitWidth="315.0" layoutX="-1.0" layoutY="2.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@../resources/images/background.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="63.0" fitWidth="64.0" layoutX="173.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../resources/images/book.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="115.0" layoutY="185.0" text="Home Academy" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="149.0" layoutY="241.0" text="Learn to do more" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold Italic" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <Pane layoutX="300.0" layoutY="-1.0" prefHeight="403.0" prefWidth="299.0" style="-fx-background-color: #fff;">
+                    <children>
+                        <Label fx:id="closeButton" layoutX="285.0" layoutY="1.0" onMouseClicked="#handleCloseButtonAction" text="X" textFill="#183e86">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font></Label>
+                        <Button fx:id="searchCourses" layoutX="60.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#handleSearchCoursesButton" prefHeight="107.0" prefWidth="179.0" style="-fx-background-color: #183e86;" text="Search course" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="viewCourses" layoutX="60.0" layoutY="241.0" mnemonicParsing="false" onMouseClicked="#handleViewCoursesButton" prefHeight="107.0" prefWidth="179.0" style="-fx-background-color: #183e86;" text="View my courses" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
