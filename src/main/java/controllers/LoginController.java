@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import exceptions.UsernameOrPasswordIncorrectException;
+import services.User;
 
 import java.io.IOException;
 import java.net.URL;
